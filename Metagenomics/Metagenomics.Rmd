@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# renderlungData.sh
+
+# This shell script is to render lungData.Rmd
+
+
+R -e "rmarkdown::render('lungData.Rmd', output_format='all')"
+

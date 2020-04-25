@@ -1,0 +1,29 @@
+TY  - JOUR
+AU  - Poplin, Ryan
+AU  - Chang, Pi-Chuan
+AU  - Alexander, David
+AU  - Schwartz, Scott
+AU  - Colthurst, Thomas
+AU  - Ku, Alexander
+AU  - Newburger, Dan
+AU  - Dijamco, Jojo
+AU  - Nguyen, Nam
+AU  - Afshar, Pegah T
+AU  - Gross, Sam S
+AU  - Dorfman, Lizzie
+AU  - McLean, Cory Y
+AU  - DePristo, Mark A
+PY  - 2018
+DA  - 2018/11/01
+TI  - A universal SNP and small-indel variant caller using deep neural networks
+JO  - Nature Biotechnology
+SP  - 983
+EP  - 987
+VL  - 36
+IS  - 10
+AB  - DeepVariant uses convolutional neural networks to improve the accuracy of variant calling.
+SN  - 1546-1696
+UR  - https://doi.org/10.1038/nbt.4235
+DO  - 10.1038/nbt.4235
+ID  - Poplin2018
+ER  - 
