@@ -1,0 +1,82 @@
+## TY  - JOUR
+## ID  - Love
+## DB  - PubMed
+## AU  - Love, Michael I
+## AU  - Huber, Wolfgang
+## AU  - Anders, Simon
+## T1  - Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2
+## SN  - 1474-760X
+## SN  - 1465-6906
+## Y1  - 2014
+## ET  - 2014/12/05
+## AB  - In comparative high-throughput sequencing assays, a fundamental task is the analysis of count data, such as read counts per gene in RNA-seq, for evidence of systematic changes across experimental conditions. Small replicate numbers, discreteness, large dynamic range and the presence of outliers require a suitable statistical approach. We present DESeq2, a method for differential analysis of count data, using shrinkage estimation for dispersions and fold changes to improve stability and interpretability of estimates. This enables a more quantitative analysis focused on the strength rather than the mere presence of differential expression. The DESeq2 package is available at http://www.bioconductor.org/packages/release/bioc/html/DESeq2.html webcite.
+## SP  - 550
+## SP  - 550
+## EP  - 550
+## VL  - 15
+## IS  - 12
+## AN  - 25516281
+## UR  - https://www.ncbi.nlm.nih.gov/pubmed/25516281
+## DO  - 10.1186/s13059-014-0550-8
+## L2  - https://www.ncbi.nlm.nih.gov/pmc/PMC4302049/
+## U1  - 25516281[pmid]
+## U2  - PMC4302049[pmcid]
+## U4  - s13059-014-0550-8[PII]
+## J1  - Genome Biol
+## JF  - Genome biology
+## PB  - BioMed Central
+## ER  -  
+## TY  - JOUR
+## ID  - Soneson
+## DB  - PubMed
+## AU  - Soneson, Charlotte
+## AU  - Love, Michael I
+## AU  - Robinson, Mark D
+## T1  - Differential analyses for RNA-seq: transcript-level estimates improve gene-level inferences
+## SN  - 2046-1402
+## SN  - 2046-1402
+## Y1  - 2016/02/29
+## AB  - High-throughput sequencing of cDNA (RNA-seq) is used extensively to characterize the transcriptome of cells. Many transcriptomic studies aim at comparing either abundance levels or the transcriptome composition between given conditions, and as a first step, the sequencing reads must be used as the basis for abundance quantification of transcriptomic features of interest, such as genes or transcripts. Various quantification approaches have been proposed, ranging from simple counting of reads that overlap given genomic regions to more complex estimation of underlying transcript abundances. In this paper, we show that gene-level abundance estimates and statistical inference offer advantages over transcript-level analyses, in terms of performance and interpretability. We also illustrate that the presence of differential isoform usage can lead to inflated false discovery rates in differential gene expression analyses on simple count matrices but that this can be addressed by incorporating offsets derived from transcript-level abundance estimates. We also show that the problem is relatively minor in several real data sets. Finally, we provide an R package ( tximport) to help users integrate transcript-level abundance estimates from common quantification pipelines into count-based statistical inference engines.
+## SP  - 1521
+## SP  - 1521
+## EP  - 1521
+## VL  - 4
+## AN  - 26925227
+## UR  - https://www.ncbi.nlm.nih.gov/pubmed/26925227
+## DO  - 10.12688/f1000research.7563.2
+## L2  - https://www.ncbi.nlm.nih.gov/pmc/PMC4712774/
+## U1  - 26925227[pmid]
+## U2  - PMC4712774[pmcid]
+## J1  - F1000Res
+## JF  - F1000Research
+## PB  - F1000Research
+## ER  - 
+## TY  - JOUR
+## ID  - Patro
+## DB  - PubMed
+## AU  - Patro, Rob
+## AU  - Duggal, Geet
+## AU  - Love, Michael I
+## AU  - Irizarry, Rafael A
+## AU  - Kingsford, Carl
+## T1  - Salmon provides fast and bias-aware quantification of transcript expression
+## SN  - 1548-7105
+## SN  - 1548-7091
+## Y1  - 2017/04/
+## ET  - 2017/03/06
+## AB  - We introduce Salmon, a lightweight method for quantifying transcript abundance from RNA-seq reads. Salmon combines a new dual-phase parallel inference algorithm and feature-rich bias models with an ultra-fast read mapping procedure. It is the first transcriptome-wide quantifier to correct for fragment GC-content bias, which, as we demonstrate here, substantially improves the accuracy of abundance estimates and the sensitivity of subsequent differential expression analysis.
+## SP  - 417
+## EP  - 419
+## VL  - 14
+## IS  - 4
+## AN  - 28263959
+## UR  - https://www.ncbi.nlm.nih.gov/pubmed/28263959
+## DO  - 10.1038/nmeth.4197
+## L2  - https://www.ncbi.nlm.nih.gov/pmc/PMC5600148/
+## U1  - 28263959[pmid]
+## U2  - PMC5600148[pmcid]
+## U4  - nmeth.4197[PII]
+## J1  - Nat Methods
+## JF  - Nature methods
+## ER  - 
+

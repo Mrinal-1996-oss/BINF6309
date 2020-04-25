@@ -1,0 +1,38 @@
+TY  - JOUR
+DB  - PubMed
+AU  - Love, Michael I
+AU  - Soneson, Charlotte
+AU  - Patro, Rob
+T1  - Swimming downstream: statistical analysis of differential transcript usage following Salmon quantification
+LA  - eng
+SN  - 2046-1402
+Y1  - 2018/06/27
+AB  - Detection of differential transcript usage (DTU) from RNA-seq data is an important bioinformatic analysis that complements differential gene expression analysis. Here we present a simple workflow using a set of existing R/Bioconductor packages for analysis of DTU. We show how these packages can be used downstream of RNA-seq quantification using the Salmon software package. The entire pipeline is fast, benefiting from inference steps by Salmon to quantify expression at the transcript level. The workflow includes live, runnable code chunks for analysis using DRIMSeq and DEXSeq, as well as for performing two-stage testing of DTU using the stageR package, a statistical framework to screen at the gene level and then confirm which transcripts within the significant genes show evidence of DTU. We evaluate these packages and other related packages on a simulated dataset with parameters estimated from real data.
+SP  - 952
+EP  - 952
+VL  - 7
+AN  - 30356428
+UR  - https://www.ncbi.nlm.nih.gov/pubmed/30356428
+DO  - 10.12688/f1000research.15398.2
+L2  - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6178912.2/
+U1  - 30356428[pmid]
+U2  - PMC6178912.2[pmcid]
+J2  - F1000Res
+JF  - F1000Research
+KW  - *DEXSeq
+KW  - *DRIMSeq
+KW  - *RNA-seq
+KW  - *Salmon
+KW  - *differential transcript usage
+KW  - *stageR
+KW  - *tximport
+KW  - *workflow
+KW  - Animals
+KW  - *Computational Biology
+KW  - Gene Expression Profiling/instrumentation/*methods
+KW  - *Gene Expression Regulation
+KW  - *RNA/biosynthesis/genetics
+KW  - Sequence Analysis, RNA/instrumentation/*methods
+KW  - *Software
+PB  - F1000 Research Limited
+ER  - 

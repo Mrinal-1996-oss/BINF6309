@@ -1,0 +1,8 @@
+Author: Mrinal Subash
+output:
+md_document:
+ variant: gfm
+---
+
+```{R, code=readLines("mergeKo.R"), echo=TRUE, eval=TRUE}
+```

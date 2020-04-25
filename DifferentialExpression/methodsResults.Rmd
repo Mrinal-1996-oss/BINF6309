@@ -1,0 +1,33 @@
+---
+author: Mrinal Subash
+output:
+  html_document:
+    toc: true
+    toc_depth: 4
+    toc_float: true
+    dev: 'svg'
+  md_document:
+    variant: gfm
+bibliography: bibliography.ris
+nocite: '@*'
+---
+
+## Differential Expression 
+
+## Methods
+
+To perform differential expression analysis, we conducted two steps; estimate the relative abundance of transcripts, and apply statistical models to
+test for differential expression between treatment groups. To estimate the relative abundance, we determine the numbers NGS reads match a given gene
+within a genome. To accomplish, we utilized three packages Salmon, DESeq2, and tximport. 
+
+
+
+## Results
+
+```{R}
+library(knitr)
+de_anno <- read.csv("deAnnotated.csv", header= T)
+kable(de_anno)
+```
+
+## References

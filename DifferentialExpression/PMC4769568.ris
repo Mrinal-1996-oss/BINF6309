@@ -1,0 +1,35 @@
+TY  - JOUR
+DB  - PubMed
+AU  - Raithel, Seth
+AU  - Johnson, Loretta
+AU  - Galliart, Matthew
+AU  - Brown, Sue
+AU  - Shelton, Jennifer
+AU  - Herndon, Nicolae
+AU  - Bello, Nora M
+T1  - Inferential considerations for low-count RNA-seq transcripts: a case study on the dominant prairie grass Andropogon gerardii
+LA  - eng
+SN  - 1471-2164
+Y1  - 2016/02/27
+AB  - BACKGROUND: Differential expression (DE) analysis of RNA-seq data still poses inferential challenges, such as handling of transcripts characterized by low expression levels. In this study, we use a plasmode-based approach to assess the relative performance of alternative inferential strategies on RNA-seq transcripts, with special emphasis on transcripts characterized by a small number of read counts, so-called low-count transcripts, as motivated by an ecological application in prairie grasses. Big bluestem (Andropogon gerardii) is a wide-ranging dominant prairie grass of ecological and agricultural importance to the US Midwest while edaphic subspecies sand bluestem (A. gerardii ssp. Hallii) grows exclusively on sand dunes. Relative to big bluestem, sand bluestem exhibits qualitative phenotypic divergence consistent with enhanced drought tolerance, plausibly associated with transcripts of low expression levels. Our dataset consists of RNA-seq read counts for 25,582 transcripts (60% of which are classified as low-count) collected from leaf tissue of individual plants of big bluestem (n = 4) and sand bluestem (n = 4). Focused on low-count transcripts, we compare alternative ad-hoc data filtering techniques commonly used in RNA-seq pipelines and assess the inferential performance of recently developed statistical methods for DE analysis, namely DESeq2 and edgeR robust. These methods attempt to overcome the inherently noisy behavior of low-count transcripts by either shrinkage or differential weighting of observations, respectively. RESULTS: Both DE methods seemed to properly control family-wise type 1 error on low-count transcripts, whereas edgeR robust showed greater power and DESeq2 showed greater precision and accuracy. However, specification of the degree of freedom parameter under edgeR robust had a non-trivial impact on inference and should be handled carefully. When properly specified, both DE methods showed overall promising inferential performance on low-count transcripts, suggesting that ad-hoc data filtering steps at arbitrary expression thresholds may be unnecessary. A note of caution is in order regarding the approximate nature of DE tests under both methods. CONCLUSIONS: Practical recommendations for DE inference are provided when low-count RNA-seq transcripts are of interest, as is the case in the comparison of subspecies of bluestem grasses. Insights from this study may also be relevant to other applications focused on transcripts of low expression levels.
+SP  - 140
+EP  - 140
+VL  - 17
+AN  - 26919855
+UR  - https://www.ncbi.nlm.nih.gov/pubmed/26919855
+DO  - 10.1186/s12864-016-2442-7
+L2  - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4769568/
+U1  - 26919855[pmid]
+U2  - PMC4769568[pmcid]
+U4  - 10.1186/s12864-016-2442-7[PII]
+J2  - BMC Genomics
+JF  - BMC genomics
+KW  - Adaptation, Physiological/genetics
+KW  - Andropogon/*genetics
+KW  - Genomics/*methods
+KW  - Phenotype
+KW  - RNA, Plant/*genetics
+KW  - Sequence Analysis, RNA/*methods
+KW  - *Transcriptome
+PB  - BioMed Central
+ER  - 

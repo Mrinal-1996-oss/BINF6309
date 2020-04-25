@@ -1,0 +1,158 @@
+---
+title : "runPlink"
+author: Mrinal Subash
+output:
+  html_document:
+    toc: true
+    toc_depth: 4
+    toc_float: true
+    dev: 'svg'
+  md_document:
+    variant: gfm
+---
+
+```{R}
+library(knitr)
+```
+
+```{bash, error=F}
+#Get basic summary about the file 
+plink --file hapmap1
+#Make a binary PED file
+plink --file hapmap1 --make-bed --out hapmap1
+plink --file hapmap1 --make-bed --mind 0.05 --out highgeno
+plink --bfile hapmap1
+#Generate a summary of the statistics
+plink --bfile hapmap1 --missing --out miss_stat
+```
+
+```{R}
+file1 <- read.table("miss_stat.lmiss", header = TRUE, sep="\t")
+kable(head(file1))
+```
+
+```{R}
+file2 <- read.table("miss_stat.imiss", header  = TRUE , sep="\t")
+kable(head(file2))
+```
+
+```{bash, error=F}
+#Perform statistical analysis of chromosomes
+plink --bfile hapmap1 --chr 1 --out res1 --missing
+plink --bfile hapmap1 --chr 2 --out res2 --missing
+#Make a statistics summary of allele frequency
+plink --bfile hapmap1 --freq --out freq_stat
+plink --bfile hapmap1 --freq --within pop.phe --out freq_stat
+```
+
+
+```{R}
+file3 <- read.table("freq_stat.frq.strat", header = TRUE, sep="\t")
+kable(head(file3))
+```
+
+```{bash, error =F}
+#For single specific SNP
+plink --bfile hapmap1 --snp rs1891905 --freq --within pop.phe --out snp1_frq_stat
+#Perform basic association analysis for all SNPis
+plink --bfile hapmap1 --assoc --out as1
+```
+
+```{R}
+file4 <- read.table("as1.assoc", header = TRUE, sep="\t")
+kable(head(file4))
+```
+
+```{bash, error=F}
+sort --key=7 -nr as1.assoc | head
+plink --bfile hapmap1 --assoc --adjust --out as2
+```
+
+
+```{R}
+file5 <- read.table("as2.assoc.adjusted", header = TRUE, sep="\t")
+kable(head(file5))
+```
+
+
+```{bash, error=F}
+#Calculate association statistics based of genotypic and association models
+plink --bfile hapmap1 --pheno pop.phe --assoc --adjust --out as3
+plink --bfile hapmap1 --model --snp rs2222162 --out mod1
+plink --bfile hapmap1 --model --cell 0 --snp rs2222162 --out mod2
+#Perform stratification analysis
+plink --bfile hapmap1 --cluster --mc 2 --ppc 0.05 --out str1
+```
+
+```{R}
+file6 <- read.table("str1.cluster1", header = TRUE, sep="\t")
+kable(head(file6))
+```
+
+```{bash, error=F}
+#Association analysis, accounting for clusters
+plink --bfile hapmap1 --mh --within str1.cluster2 --adjust --out aac1
+```
+
+```{R}
+file7 <- read.table("aac1.cmh.adjusted", header = TRUE, sep ="\t")
+kable(head(file7))
+```
+
+
+```{bash, error =F}
+plink --bfile hapmap1 --cluster --cc --ppc 0.01 --out version2
+plink --bfile hapmap1 --mh --within version2.cluster2 --adjust --out aac2
+plink --bfile hapmap1 --cluster --K 2 --out version3
+```
+
+
+```{R}
+file8<- read.table("aac2.cmh.adjusted", header = TRUE, sep="\t")
+kable(head(file8))
+```
+
+
+```{bash, error =F}
+plink --bfile hapmap1 --mh --within pop.phe --adjust --out aac3
+plink --bfile hapmap1 --cluster --matrix --out ibd_view
+```
+
+
+```{R, echo= F,result='hide'}
+m <- as.matrix(read.table("ibd_view.mibs"))
+ibs <- cmdscale(as.dist(1-m))
+k <- c( rep("green", 45) , rep("blue", 44))
+plot(ibs, pch = 20, col=k)
+```
+
+
+```{bash, error=F}
+#Quantitative trait association analysis
+plink --bfile hapmap1 --assoc --pheno qt.phe --out quant1
+```
+
+
+```{bash, error =F}
+plink --bfile hapmap1 --assoc --pheno qt.phe --perm --within str1.cluster2 --out quant2
+```
+
+```{R}
+file10 <- read.table("quant2.qassoc.perm", header = TRUE, sep = "\t")
+kable(head(file10))
+```
+
+
+
+```{bash, error =F}
+plink --bfile hapmap1 --assoc --pheno qt.phe --mperm 1000 --within str1.cluster2 --out quant3
+plink --bfile hapmap1 --pheno qt.phe --gxe --covar pop.phe --snp rs2222162 --out quant3
+```
+
+
+```{bash, error =T}
+#Extracting a SNP of interest
+plink --bfile hapmap1 --snp rs2222162 --recodeAD --out rec_snp1
+d <- read.table("rec_snp1.recode.raw" , header=T)
+summary(glm(PHENOTYPE-1 ~ rs2222162_A, data=d, family="binomial"))
+```
